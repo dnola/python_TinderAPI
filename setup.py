@@ -6,6 +6,6 @@ setup(
    description='A simple interface for the 2020 Tinder API (Forked from MMcintire96s interface)',
    author='David Nola',
    author_email='david.nola.ca@gmail.com',
-   packages=['tinder_api', 'tinder_api.session', 'tinder_api.utils'],
+   packages=['tinder_api', 'tinder_api.utils'],
    install_requires=['requests'], 
 )
