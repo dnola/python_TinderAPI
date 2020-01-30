@@ -48,17 +48,17 @@ class NormalUser(UserModel):
     def like(self):
         """Likes (swipes right) the user"""
         resp = r.get('/like/{}'.format(self.id))
-        return resp['match']
+        return resp
 
     def super_like(self):
         """Super likes (swipes up) the user"""
-        resp = r.post('/like/{}/super'.format(self.id), {})
-        return resp['match']
+        resp = r.get('/like/{}/super'.format(self.id), {})
+        return resp
 
     def dislike(self):
         """Dislikes (swipes left) the user"""
-        resp = r.post('/pass/{}'.format(self.id))
-        return 'passed'
+        resp = r.get('/pass/{}'.format(self.id))
+        return resp
 
 
 class MatchUser(UserModel):
