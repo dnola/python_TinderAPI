@@ -1,8 +1,8 @@
 import requests
 
-import user as u
-from utils import config as c
-from utils import request_handlers as r
+from tinder_api import user as u
+from tinder_api.utils import config as c
+from tinder_api.utils import request_handlers as r
 
 
 class Session():
