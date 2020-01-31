@@ -1,6 +1,6 @@
-from tinder_api import session
-from tinder_api.utils import request_handlers as r
-from tinder_api.utils.wrapper import JsonWrapper
+import session
+from utils import request_handlers as r
+from utils.wrapper import JsonWrapper
 
 import json
 import datetime
