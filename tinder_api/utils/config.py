@@ -1,4 +1,4 @@
-with open("tinder_api/utils/token.txt", "r") as f:
+with open("token.txt", "r") as f:
     tinder_token = f.read()
 
 # it is best for you to write in the token to save yourself the file I/O
