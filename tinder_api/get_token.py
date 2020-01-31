@@ -36,7 +36,7 @@ def get_api_token(refresh_token):
     response = r.json()
     return response.get("data")["api_token"]
 
-def prompt_for_token(phone_number = None, save=False):
+def prompt_for_token(phone_number = None, save=True):
     if not phone_number:
         phone_number = input("Please enter your phone number under the international format (country code + number): ")
     log_code = send_otp_code(phone_number)
