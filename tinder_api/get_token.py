@@ -36,7 +36,7 @@ def get_api_token(refresh_token):
     response = r.json()
     return response.get("data")["api_token"]
 
-def prompt_for_token(phone_number = None):
+def prompt_for_token(phone_number = None, save=False):
     if not phone_number:
         phone_number = input("Please enter your phone number under the international format (country code + number): ")
     log_code = send_otp_code(phone_number)
@@ -44,4 +44,7 @@ def prompt_for_token(phone_number = None):
     refresh_token = get_refresh_token(otp_code, phone_number)
     t_token = str(get_api_token(refresh_token))
     print("Here is your Tinder token: " + t_token)
+    if save:
+        with open('token.txt', 'w') as f:
+            f.write(str(t_token))
     return t_token
